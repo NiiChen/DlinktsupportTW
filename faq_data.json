@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "question": "我無法升級 AQUILA PRO AI App",
+    "answer": "請確認您使用的系統版本是否符合最低需求（iOS 16.4 / Android 10 以上）並更新應用程式至最新版本。",
+    "category": "App 升級",
+    "keywords": "升級,更新,app版本",
+    "similar_phrases": "更新失敗,app 不能用,不能升級"
+  },
+  {
+    "id": 2,
+    "question": "我忘記帳號密碼怎麼辦？",
+    "answer": "您可以點選登入畫面下方的「忘記密碼」來重新設定密碼。",
+    "category": "帳號問題",
+    "keywords": "帳號,密碼,忘記",
+    "similar_phrases": "忘記密碼,帳號登不進去,重設密碼"
+  },
+  {
+    "id": 3,
+    "question": "雙重驗證如何設定？",
+    "answer": "請至帳號設定 > 安全性 > 開啟雙重驗證，依照畫面指示完成即可。",
+    "category": "帳號安全",
+    "keywords": "雙重驗證,2FA,驗證碼",
+    "similar_phrases": "2FA 怎麼開,驗證碼設定,雙重登入"
+  }
+]
