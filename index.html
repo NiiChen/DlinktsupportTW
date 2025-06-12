@@ -1,33 +1,40 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>D妹客服機器人</title>
-  <link rel="stylesheet" href="/supportTW/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D妹客服</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- D妹浮動氣泡按鈕 -->
-  <div id="chatbot-toggle">
-    <img src="/supportTW/images/d妹頭像.png" alt="D妹" />
+  <!-- 浮動氣泡按鈕 -->
+  <div id="chat-toggle" class="chat-toggle">
+    <img src="images/Dmeiphoto.png" alt="D妹頭像" width="48" height="48">
   </div>
 
-  <!-- D妹聊天視窗 -->
-  <div id="chatbot-window" class="hidden">
-    <div id="chatbot-header">您好，我是 D妹</div>
-    <div id="chatbot-content"></div>
-    <div id="chatbot-input">
-      <input type="text" id="user-input" placeholder="請輸入您的問題..." />
+  <!-- 聊天視窗 -->
+  <div id="chat-window" class="chat-window hidden">
+    <div class="chat-header">
+      <span>D妹客服</span>
+      <button id="close-chat">×</button>
+    </div>
+    <div id="chat-box" class="chat-box"></div>
+    <div class="chat-input">
+      <input id="user-input" type="text" placeholder="請輸入您的問題...">
       <button id="send-button">送出</button>
     </div>
   </div>
 
-  <script src="/supportTW/chatbot.js"></script>
+  <script src="chatbot.js"></script>
+  <script>
+    // 切換視窗顯示
+    document.getElementById('chat-toggle').onclick = () => {
+      document.getElementById('chat-window').classList.remove('hidden');
+    };
+    document.getElementById('close-chat').onclick = () => {
+      document.getElementById('chat-window').classList.add('hidden');
+    };
+  </script>
 </body>
 </html>
-  </div>
 
-  <script src="/supportTW/chatbot.js"></script>
-</body>
-</html>
