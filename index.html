@@ -5,12 +5,107 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>D妹客服</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .chat-toggle {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 56px;
+      height: 56px;
+      background: url('images/Dmeiphotob.png') no-repeat center center;
+      background-size: cover;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      z-index: 1000;
+    }
+
+    .chat-window {
+      position: fixed;
+      bottom: 90px;
+      right: 24px;
+      width: 360px;
+      max-height: 500px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      z-index: 999;
+    }
+
+    .hidden {
+      display: none; 
+    }
+
+    .chat-header {
+      background-color: #3182CE;
+      color: white;
+      padding: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .chat-box {
+      flex: 1;
+      padding: 12px;
+      overflow-y: auto;
+      font-size: 14px;
+    }
+
+    .chat-input {
+      display: flex;
+      padding: 8px;
+      border-top: 1px solid #ddd;
+    }
+
+    .chat-input input {
+      flex: 1;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .chat-input button {
+      margin-left: 8px;
+      padding: 8px 12px;
+      background: #3182CE;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .message {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 8px;
+    }
+
+    .message.bot img.avatar {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+
+    .message.bot .bubble {
+      background: #edf2f7;
+      padding: 8px;
+      border-radius: 8px;
+      max-width: 80%;
+    }
+
+    .message.user {
+      justify-content: flex-end;
+    }
+  </style>
 </head>
 <body>
   <!-- 浮動氣泡按鈕 -->
-  <div id="chat-toggle" class="chat-toggle">
-    <img src="images/Dmeiphoto.png" alt="D妹頭像" width="48" height="48">
-  </div>
+  <div id="chat-toggle" class="chat-toggle"></div>
 
   <!-- 聊天視窗 -->
   <div id="chat-window" class="chat-window hidden">
@@ -27,14 +122,31 @@
 
   <script src="chatbot.js"></script>
   <script>
-    // 切換視窗顯示
     document.getElementById('chat-toggle').onclick = () => {
       document.getElementById('chat-window').classList.remove('hidden');
     };
     document.getElementById('close-chat').onclick = () => {
       document.getElementById('chat-window').classList.add('hidden');
     };
+
+    // 對話訊息渲染示範 (你可在 chatbot.js 呼叫 appendMessage)
+    function appendMessage(sender, text) {
+      const chatBox = document.getElementById('chat-box');
+      const msg = document.createElement('div');
+      msg.className = `message ${sender}`;
+
+      if (sender === 'bot') {
+        msg.innerHTML = `
+          <img src="images/Dmeiphoto.png" alt="avatar" class="avatar">
+          <div class="bubble">${text}</div>
+        `;
+      } else {
+        msg.innerHTML = `<div class="bubble">${text}</div>`;
+      }
+
+      chatBox.appendChild(msg);
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
   </script>
 </body>
 </html>
-
