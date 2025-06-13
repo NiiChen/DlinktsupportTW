@@ -72,7 +72,8 @@ body {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  color: black;
+  color: black !important;
+  background-color: white;
 }
 
 .chat-input button {
@@ -85,17 +86,15 @@ body {
   cursor: pointer;
 }
 
-/* === 訊息區塊 === */
+/* === 訊息區塊與頭像 === */
 .message {
   display: flex;
   align-items: flex-start;
   margin-bottom: 10px;
 }
 
-/* === Bot 訊息靠左 === */
 .message.bot {
   flex-direction: row;
-  justify-content: flex-start;
 }
 
 .message.bot .avatar {
@@ -113,10 +112,14 @@ body {
   max-width: 80%;
 }
 
-/* === 使用者訊息靠右 === */
 .message.user {
-  flex-direction: row-reverse;
   justify-content: flex-end;
+}
+
+.message.user .bubble-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
 }
 
 .message.user .avatar {
@@ -134,4 +137,3 @@ body {
   max-width: 80%;
   text-align: right;
 }
-
