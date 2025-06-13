@@ -93,8 +93,10 @@ body {
   margin-bottom: 10px;
 }
 
+/* === Bot 訊息靠左 === */
 .message.bot {
   flex-direction: row;
+  justify-content: flex-start;
 }
 
 .message.bot .avatar {
@@ -112,14 +114,12 @@ body {
   max-width: 80%;
 }
 
+/* === User 訊息靠右 === */
 .message.user {
-  justify-content: flex-end;
-}
-
-.message.user .bubble-container {
-  display: flex;
-  align-items: center;
   flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-left: auto;
 }
 
 .message.user .avatar {
