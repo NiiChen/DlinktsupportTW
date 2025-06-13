@@ -112,7 +112,7 @@ body {
 
 .message.user .bubble {
   background: #3182CE;
-  color: blue;
+  color: black;
   padding: 8px;
   border-radius: 8px;
   max-width: 80%;
