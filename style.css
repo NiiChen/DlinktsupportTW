@@ -67,12 +67,11 @@ body {
   background-color: #fff;
 }
 
-.chat-input input {
-  flex: 1;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.chat-input input[type="text"] {
   color: black !important;
+  background-color: white !important;
+  caret-color: black !important;
+  -webkit-text-fill-color: black !important; /* iOS/Safari 修正 */
 }
 
 .chat-input button {
