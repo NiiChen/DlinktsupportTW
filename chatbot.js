@@ -30,8 +30,8 @@ function appendMessage(sender, text, isHTML = false) {
   } else {
     message.innerHTML = `
       <div style="display: flex; align-items: center;">
-        <img src="images/userphoto.png" alt="使用者頭像" class="avatar" style="width: 20px; height: 20px; border-radius: 50%; margin-right: 8px;">
         <div class="bubble">${text.replace(/\n/g, "<br>")}</div>
+        <img src="images/userphoto.png" alt="使用者頭像" class="avatar" style="width: 20px; height: 20px; border-radius: 50%; margin-right: 8px;">
       </div>
     `;
   }
