@@ -278,14 +278,7 @@
     "category": "AI 功能",
     "keywords": "AI Setup, 快速設定, 雲端備份",
     "similar_phrases": "什麼是 AI 設定, 自動還原怎麼用, 換新裝置設定怎麼辦"
-  },
-  {
-    "id": 36,
-    "question": "什麼是 hop？在 Mesh 網路中會產生哪些影響？",
-    "answer": "hop 是資料封包從一個 Mesh 節點跳轉到另一個節點的次數。hop 層數越多，可能導致延遲上升與效能下降，建議不超過 2 層。",
-    "category": "Mesh 網路",
-    "keywords": "hop, 中繼層數, Mesh 延遲",
-    "similar_phrases": "什麼是 hop, hop 多會怎樣, 三層 Mesh 可以嗎"
   }
+
 
 ]
