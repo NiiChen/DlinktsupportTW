@@ -72,7 +72,7 @@ body {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  color: black !important;
+  color: black;
   background-color: white;
 }
 
@@ -86,17 +86,17 @@ body {
   cursor: pointer;
 }
 
-/* === 訊息區塊與頭像 === */
+/* === 訊息區塊 === */
 .message {
   display: flex;
   align-items: flex-start;
   margin-bottom: 10px;
 }
 
-/* === Bot 訊息靠左 === */
+/* === 機器人訊息靠左 === */
 .message.bot {
-  flex-direction: row;
   justify-content: flex-start;
+  flex-direction: row;
 }
 
 .message.bot .avatar {
@@ -114,19 +114,10 @@ body {
   max-width: 80%;
 }
 
-/* === User 訊息靠右 === */
+/* === 使用者訊息靠右 === */
 .message.user {
-  flex-direction: row-reverse;
   justify-content: flex-end;
-  align-items: flex-start;
-  margin-left: auto;
-}
-
-.message.user .avatar {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  margin-left: 8px;
+  flex-direction: row;
 }
 
 .message.user .bubble {
@@ -135,5 +126,13 @@ body {
   padding: 8px;
   border-radius: 8px;
   max-width: 80%;
-  text-align: right;
+  order: 1;
+}
+
+.message.user .avatar {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-left: 8px;
+  order: 2;
 }
