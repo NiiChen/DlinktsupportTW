@@ -76,15 +76,25 @@ body {
   padding: 10px;
   cursor: pointer;
 }
+
 .message.user {
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
+.message.user .bubble {
+  background: #3182CE;
+  color: white;
+  margin-right: 8px;
+  border-radius: 8px;
+  padding: 8px;
+  max-width: 80%;
+}
+
 .message.user img.avatar {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  margin-left: 8px; /* 或改 margin-right 看你要頭像在右側還是左側 */
+  margin-left: 0;
 }
