@@ -1,9 +1,14 @@
+/* === 全域基礎設定 === */
 body {
   margin: 0;
   font-family: sans-serif;
 }
 
-/* 浮動按鈕 */
+.hidden {
+  display: none;
+}
+
+/* === 浮動氣泡按鈕 === */
 .chat-toggle {
   position: fixed;
   bottom: 24px;
@@ -18,7 +23,7 @@ body {
   z-index: 1000;
 }
 
-/* 聊天視窗 */
+/* === 聊天視窗 === */
 .chat-window {
   position: fixed;
   bottom: 90px;
@@ -34,11 +39,7 @@ body {
   z-index: 999;
 }
 
-.hidden {
-  display: none;
-}
-
-/* 標頭 */
+/* === 頭部區塊 === */
 .chat-header {
   background-color: #3182CE;
   color: white;
@@ -46,23 +47,24 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-weight: bold;
 }
 
-/* 對話框 */
+/* === 對話區域 === */
 .chat-box {
   flex: 1;
   padding: 12px;
   overflow-y: auto;
   font-size: 14px;
-  background-color: #f9f9f9;
+  background-color: #f7f7f7;
 }
 
-/* 輸入欄 */
+/* === 輸入區 === */
 .chat-input {
   display: flex;
   padding: 8px;
   border-top: 1px solid #ddd;
-  background-color: white;
+  background-color: #fff;
 }
 
 .chat-input input {
@@ -70,7 +72,7 @@ body {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  color: black; /* 讓輸入文字是黑色 */
+  color: black !important;
 }
 
 .chat-input button {
@@ -83,19 +85,19 @@ body {
   cursor: pointer;
 }
 
-/* 對話樣式 */
+/* === 訊息氣泡與頭像 === */
 .message {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 8px;
-  max-width: 100%;
+  margin-bottom: 10px;
 }
 
+/* bot 訊息（靠左） */
 .message.bot {
   flex-direction: row;
 }
 
-.message.bot img.avatar {
+.message.bot .avatar {
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -104,18 +106,18 @@ body {
 
 .message.bot .bubble {
   background: #edf2f7;
+  color: black;
   padding: 8px;
   border-radius: 8px;
-  color: black;
   max-width: 80%;
 }
 
+/* user 訊息（靠右） */
 .message.user {
   justify-content: flex-end;
-  flex-direction: row-reverse;
 }
 
-.message.user img.avatar {
+.message.user .avatar {
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -124,9 +126,15 @@ body {
 
 .message.user .bubble {
   background: #cce4ff;
-  color: black;
+  color: black !important;
   padding: 8px;
   border-radius: 8px;
   max-width: 80%;
   text-align: right;
+  order: 1;
+}
+
+/* 使用者訊息區塊橫向排列：氣泡在左、頭像在右 */
+.message.user {
+  flex-direction: row-reverse;
 }
