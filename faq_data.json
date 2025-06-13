@@ -63,7 +63,6 @@
     "keywords": "自動登出, 被登出, 登不進去",
     "similar_phrases": "為什麼會被登出, 需要重新登入嗎"
   },
-  [
   {
     "id": 9,
     "question": "為什麼 AQUILA PRO AI app 會要求位置資訊？",
@@ -285,7 +284,7 @@
     "question": "什麼是 hop？在 Mesh 網路中會產生哪些影響？",
     "answer": "hop 是資料封包從一個 Mesh 節點跳轉到另一個節點的次數。hop 層數越多，可能導致延遲上升與效能下降，建議不超過 2 層。",
     "category": "Mesh 網路",
-    "keywords": "hop 意思, 中繼層數, Mesh 延遲",
+    "keywords": "hop, 中繼層數, Mesh 延遲",
     "similar_phrases": "什麼是 hop, hop 多會怎樣, 三層 Mesh 可以嗎"
   }
 
