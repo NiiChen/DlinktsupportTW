@@ -13,8 +13,17 @@ const headers = {
 };
 
 async function loadFAQ() {
-  const res = await fetch('faq_data.json');
-  return res.json();
+  try {
+    const res = await fetch('faq_data.json');
+    if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+    const data = await res.json();
+    console.log('✅ FAQ 載入成功，共', data.length, '筆');
+    return data;
+  } catch (err) {
+    console.error('❌ FAQ 載入錯誤:', err);
+    appendMessage('bot', '系統暫時無法載入常見問題，請稍後再試。');
+    return [];
+  }
 }
 
 function appendMessage(sender, text, isHTML = false) {
@@ -40,12 +49,14 @@ function resetChat() {
   sessionResolved = false;
   currentFAQMatches = [];
   document.getElementById('chat-box').innerHTML = '';
-  appendMessage('bot', '哈囉！請問有什麼問題需要 D妹幫助呢？請輸入您的問題');
+  appendMessage('bot', '哈囉！我是 D妹，請輸入您想詢問的問題 😊');
 }
 
 async function handleUserInput(userInput) {
   appendMessage('user', userInput);
   const faqList = await loadFAQ();
+  if (!faqList.length) return;
+
   currentFAQMatches = matchFAQ(userInput, faqList);
 
   if (currentFAQMatches.length === 0) {
@@ -73,11 +84,19 @@ async function handleUserInput(userInput) {
 
 function matchFAQ(input, faqs) {
   input = input.toLowerCase();
-  return faqs.filter(faq =>
-    faq.question.toLowerCase().includes(input) ||
-    (faq.keywords && faq.keywords.toLowerCase().split(',').some(k => input.includes(k.trim()))) ||
-    (faq.similar_phrases && faq.similar_phrases.toLowerCase().split(',').some(p => input.includes(p.trim())))
-  ).slice(0, 3);
+
+  return faqs.filter(faq => {
+    const question = faq.question?.toLowerCase() || '';
+    const keywords = faq.keywords?.toLowerCase().split(',') || [];
+    const phrases = faq.similar_phrases?.toLowerCase().split(',') || [];
+
+    return (
+      question.includes(input) ||
+      input.includes(question) ||
+      keywords.some(k => k && (input.includes(k.trim()) || k.trim().includes(input))) ||
+      phrases.some(p => p && (input.includes(p.trim()) || p.trim().includes(input)))
+    );
+  }).slice(0, 3);
 }
 
 function showFAQResults(matches) {
@@ -128,13 +147,17 @@ async function recordToSupabase(question, matched_faq_id, is_resolved) {
   };
 
   try {
-    await fetch(`${SUPABASE_URL}/rest/v1/faq_logs`, {
+    const res = await fetch(`${SUPABASE_URL}/rest/v1/faq_logs`, {
       method: 'POST',
       headers,
       body: JSON.stringify(payload)
     });
+
+    if (!res.ok) {
+      console.error('❌ Supabase 寫入錯誤:', await res.text());
+    }
   } catch (e) {
-    console.error('Supabase 紀錄失敗:', e);
+    console.error('❌ Supabase 紀錄失敗:', e);
   }
 }
 
@@ -149,4 +172,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
   resetChat();
 });
-
