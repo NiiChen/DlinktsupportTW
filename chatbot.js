@@ -5,7 +5,7 @@ let currentFAQMatches = [];
 const MAX_ROUNDS = 3;
 
 const SUPABASE_URL = 'https://isxzglzdtytltsekvfhw.supabase.co';
-const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...'; // 請替換為你的完整 key
+const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...'; // 請替換成你自己的 Key
 const headers = {
   apikey: SUPABASE_KEY,
   Authorization: `Bearer ${SUPABASE_KEY}`,
@@ -29,8 +29,10 @@ function appendMessage(sender, text, isHTML = false) {
     `;
   } else {
     message.innerHTML = `
-      <img src="images/userphoto.png" alt="使用者頭像" class="avatar">
-      <div class="bubble">${text.replace(/\n/g, "<br>")}</div>
+      <div class="bubble-container">
+        <div class="bubble">${text.replace(/\n/g, "<br>")}</div>
+        <img src="images/userphoto.png" alt="使用者頭像" class="avatar">
+      </div>
     `;
   }
 
