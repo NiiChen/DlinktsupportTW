@@ -1,11 +1,11 @@
-/* === 基礎設定 === */
+/* 基礎樣式 */
 body {
   margin: 0;
   font-family: sans-serif;
 }
 
-/* === 浮動按鈕 === */
-.chat-toggle {
+/* 浮動聊天按鈕 */
+#chat-toggle {
   position: fixed;
   bottom: 24px;
   right: 24px;
@@ -19,7 +19,7 @@ body {
   z-index: 1000;
 }
 
-/* === 聊天視窗 === */
+/* 聊天視窗 */
 .chat-window {
   position: fixed;
   bottom: 90px;
@@ -39,7 +39,6 @@ body {
   display: none;
 }
 
-/* === 標題列 === */
 .chat-header {
   background-color: #3182CE;
   color: white;
@@ -49,7 +48,6 @@ body {
   align-items: center;
 }
 
-/* === 對話區 === */
 .chat-box {
   flex: 1;
   padding: 12px;
@@ -57,7 +55,6 @@ body {
   font-size: 14px;
 }
 
-/* === 輸入區 === */
 .chat-input {
   display: flex;
   padding: 8px;
@@ -81,14 +78,19 @@ body {
   cursor: pointer;
 }
 
-/* === 機器人訊息樣式 === */
-.message.bot {
+/* 對話訊息氣泡 */
+.message {
   display: flex;
   align-items: flex-start;
   margin-bottom: 8px;
 }
 
-.message.bot img.avatar {
+/* Bot 訊息 */
+.message.bot {
+  flex-direction: row;
+}
+
+.message.bot .avatar {
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -97,51 +99,30 @@ body {
 
 .message.bot .bubble {
   background: #edf2f7;
-  padding: 8px;
-  border-radius: 8px;
-  max-width: 80%;
-}
-
-/* === 使用者訊息樣式（頭像在右邊） === */
-.message.user {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin-bottom: 8px;
-}
-
-.message.user .bubble {
-  background: #3182CE;
   color: black;
   padding: 8px;
   border-radius: 8px;
   max-width: 80%;
-  margin-right: 8px;
-  text-align: right;
 }
 
-.message.user img.avatar {
+/* 使用者訊息 */
+.message.user {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.message.user .avatar {
   width: 20px;
   height: 20px;
   border-radius: 50%;
+  margin-left: 8px;
 }
 
-/* === 回饋按鈕樣式 === */
-.feedback {
-  margin-top: 8px;
-  display: flex;
-  gap: 8px;
+.message.user .bubble {
+  background: #d9eaff;
+  color: black;
+  padding: 8px;
+  border-radius: 8px;
+  max-width: 80%;
+  text-align: right;
 }
-
-.feedback button {
-  padding: 6px 10px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  background-color: #e2e8f0;
-}
-
-.feedback button:hover {
-  background-color: #cbd5e0;
-}
-
