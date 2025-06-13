@@ -29,10 +29,8 @@ function appendMessage(sender, text, isHTML = false) {
     `;
   } else {
     message.innerHTML = `
-      <div class="bubble-container">
-        <div class="bubble">${text.replace(/\n/g, "<br>")}</div>
-        <img src="images/userphoto.png" alt="使用者頭像" class="avatar">
-      </div>
+      <div class="bubble">${text.replace(/\n/g, "<br>")}</div>
+      <img src="images/userphoto.png" alt="使用者頭像" class="avatar">
     `;
   }
 
