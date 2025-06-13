@@ -24,15 +24,13 @@ function appendMessage(sender, text, isHTML = false) {
 
   if (sender === 'bot') {
     message.innerHTML = `
-      <img src="images/Dmeiphoto.png" alt="D妹頭像" class="avatar" style="width: 20px; height: 20px; border-radius: 50%; margin-right: 8px;">
+      <img src="images/Dmeiphoto.png" alt="D妹頭像" class="avatar">
       <div class="bubble">${isHTML ? text : text.replace(/\n/g, "<br>")}</div>
     `;
   } else {
     message.innerHTML = `
-      <div style="display: flex; align-items: center;">
-        <div class="bubble">${text.replace(/\n/g, "<br>")}</div>
-        <img src="images/userphoto.png" alt="使用者頭像" class="avatar" style="width: 20px; height: 20px; border-radius: 50%; margin-right: 8px;">
-      </div>
+      <div class="bubble">${text.replace(/\n/g, "<br>")}</div>
+      <img src="images/userphoto.png" alt="使用者頭像" class="avatar">
     `;
   }
 
