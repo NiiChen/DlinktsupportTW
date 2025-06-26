@@ -94,23 +94,21 @@ function checkMatch(field, input) {
 }
 
 function showFAQResults(matches) {
-  if (matches.length === 0) return;
+  const topMatch = matches[0]; // 顯示第一筆為答案
+  if (topMatch) {
+    appendMessage('bot', `<strong>Q:</strong> ${topMatch.question}<br><strong>A:</strong> ${topMatch.answer}`, true);
+  }
 
-  const firstMatch = matches[0];
-
-  // 顯示第一題答案
-  appendMessage(
-    'bot',
-    `<strong>Q:</strong> ${firstMatch.question}<br><strong>A:</strong> ${firstMatch.answer}`,
-    true
-  );
-
-  // 顯示最多五題相關問題的按鈕（包含第一題）
-  const suggestionButtons = matches.slice(0, 5).map(match => `
-    <button onclick="handleUserInput('${match.question}')">${match.question}</button>
-  `).join("<br>");
-
-  appendMessage('bot', `<div>你也可以點選以下相關問題：<br>${suggestionButtons}</div>`, true);
+  // 顯示其餘前五題建議（排除第一題）
+  const suggestionButtons = matches
+    .slice(1)               // 從第 2 題開始
+    .slice(0, 5)            // 最多 5 題
+    .map(match => `<button onclick="handleUserInput('${match.question}')">${match.question}</button>`)
+    .join("<br>");
+    
+  if (suggestionButtons) {
+    appendMessage('bot', `<div>你也可以點選以下相關問題：<br>${suggestionButtons}</div>`, true);
+  }
 
   const feedbackButtons = `
     <div class="feedback">
@@ -120,6 +118,7 @@ function showFAQResults(matches) {
   `;
   appendMessage('bot', feedbackButtons, true);
 }
+
 
 async function handleFeedback(isResolved) {
   const userInput = document.querySelectorAll('.message.user:last-child')[0]?.textContent || '';
