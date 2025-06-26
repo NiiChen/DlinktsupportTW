@@ -504,7 +504,160 @@
     "要怎麼移除裝置通知",
     "活動紀錄怎麼編輯"
   ]
+  },
+  {
+    "id": 63,
+    "question": "我的 AQUILA PRO AI 設備支援哪些第三方服務？",
+    "answer": "AQUILA PRO AI 路由器與延伸器支援 Google 助理與 Amazon Alexa。支援的語音指令會因操作模式而有所不同。以下為部分支援的語音指令：\n\nAmazon Alexa：\n- Alexa, ask AQUILA PRO AI to turn on guest Wi-Fi（僅限路由器模式）\n- Alexa, ask AQUILA PRO AI to reboot my router（支援路由器、橋接、延伸器模式）\n- Alexa, ask AQUILA PRO AI to upgrade my firmware（支援路由器、橋接、延伸器模式）\n\nGoogle Assistant：\n- Ok Google, enable my guest network（僅限路由器模式）\n- Ok Google, is my guest network enabled?（支援多種模式）\n- Ok Google, update my router（支援路由器、橋接、延伸器模式）\n\n* 註：標有 * 的指令需使用具備螢幕的 Google 助理裝置。",
+    "category": "語音助理整合",
+    "keywords": ["Google 助理", "Amazon Alexa", "第三方服務", "語音控制", "支援語音助理"],
+    "similar_phrases": ["AQUILA PRO AI 可以用 Alexa 嗎？", "支援哪些語音助理？", "可以跟 Google Assistant 搭配嗎？"]
+  },
+  {
+    "id": 64,
+    "question": "如何啟用 AQUILA PRO AI 路由器搭配 Amazon Alexa 使用？",
+    "answer": "請依照以下步驟啟用 Amazon Alexa 控制功能：\n\n1. 下載 Amazon Alexa App 並登入 Amazon 帳號。\n2. 點選「More」>「Skills & Games」。\n3. 搜尋「AQUILA PRO AI」，點選進入 Skill 詳細頁面。\n4. 點選「LAUNCH」並登入您的 D-Link 帳號。\n5. 點選「允許」，將帳號與 Alexa 成功連結。\n6. 完成後，即可使用語音指令控制您的 D-Link 路由器。\n\n如需進一步了解支援的語音指令，請參考 D-Link 官方網站：https://www.dlink.com/en/alexa",
+    "category": "語音助理整合",
+    "keywords": ["Amazon Alexa", "語音控制", "AQUILA PRO AI", "路由器", "啟用 Alexa"],
+    "similar_phrases": ["怎麼連接 Alexa", "設定 Alexa 控制路由器", "AQUILA 跟 Alexa 怎麼配對"]
+  },
+  {
+    "id": 65,
+    "question": "如何啟用 AQUILA PRO AI 路由器搭配 Google Assistant 使用？",
+    "answer": "請依照以下步驟啟用 Google Assistant 語音控制功能：\n\n1. 開啟 AQUILA PRO AI App，點選「語音控制」>「Google Assistant」圖示，點選「從 Google Home 連結」。\n2. 系統將導向 Google Home App，登入您的 D-Link 帳號並完成連結。\n3. 在 Google Home App 中選擇裝置並完成設定。\n4. 完成後，即可透過 Google Assistant 語音控制路由器。\n\n更多語音指令請參考 D-Link 官方網站：https://www.dlink.com/en/for-home/google-assistant",
+    "category": "語音助理整合",
+    "keywords": ["Google Assistant", "Google 助理", "語音控制", "智慧家庭", "AQUILA PRO AI"],
+    "similar_phrases": ["如何連接 Google 助理", "AQUILA 支援 Google 嗎", "怎麼讓 Google 認得我的路由器"]
+  },
+  {
+    "id": 66,
+    "question": "為什麼我應該定期重新啟動裝置？",
+    "answer": "定期重新啟動裝置可清除快取並釋放記憶體，有助於維持路由器的穩定運作。建議透過自動重啟功能定期進行。請登入路由器網頁管理頁面 > 系統管理 > 系統管理者 > 系統 > 自動重新開機，設定日期與時間後儲存即可。",
+    "category": "系統維護",
+    "keywords": "重新啟動,重開機,清除快取,定期重啟,效能提升",
+    "similar_phrases": "為什麼要重啟路由器, 要定期重開機嗎, 重新啟動有用嗎, 裝置卡住怎麼辦, 路由器變慢怎麼辦"
+  },
+  {
+    "id": 67,
+    "question": "如何手動更新 D-Link 路由器的韌體？",
+    "answer": "登入路由器網頁管理介面 > 系統管理 > 韌體更新 > 進階設定 > 選擇主機 > 上傳韌體檔案後確認版本更新成功。在升級過程中請勿斷電或關閉裝置。",
+    "category": "韌體更新",
+    "keywords": "手動更新,韌體升級,更新檔案,上傳韌體,版本確認",
+    "similar_phrases": "如何手動升級韌體, 韌體上傳步驟, 更新 D-Link 韌體方法, 路由器手動升級"
+  },
+  {
+    "id": 68,
+    "question": "如何啟用 AQUILA PRO AI 路由器的自動韌體更新？",
+    "answer": "開啟 AQUILA PRO AI App > 選擇裝置位置 > 點選路由器圖示 > 韌體版本 > 確認「自動安裝更新」已啟用即可。",
+    "category": "韌體更新",
+    "keywords": "自動更新,韌體設定,自動升級,韌體版本,App更新",
+    "similar_phrases": "怎麼開自動韌體更新, 自動韌體升級在哪設定, 路由器會自動更新嗎"
+  },
+  {
+    "id": 69,
+    "question": "我該如何查看 SW-A2 的電量？",
+    "answer": "開啟 AQUILA PRO AI App，點選 SW-A2 裝置後，即可在裝置資訊頁面下方看到剩餘電量百分比。",
+    "category": "裝置管理",
+    "keywords": "電量查詢,SW-A2電池,查看剩餘電量,感應器狀態",
+    "similar_phrases": "如何知道 SW-A2 電池剩多少, 要去哪看電量, 漏水感應器電池查詢"
+  },
+  {
+    "id": 70,
+    "question": "SW-A2 可以在水中正常運作嗎？",
+    "answer": "SW-A2 防水等級為 IP65，可承受中等程度水量。若裝置被完全淹沒，可能無法正常運作。如預期有大量積水，建議使用搭配感應線的 SW-A1。",
+    "category": "硬體規格",
+    "keywords": "SW-A2,防水等級,IP65,水中使用,淹水感應",
+    "similar_phrases": "SW-A2 可以泡水嗎, 防水嗎, 水淹會壞掉嗎"
+  },
+  {
+    "id": 71,
+    "question": "SW-A1 的整條感應線都能偵測到漏水嗎？",
+    "answer": "是的，SW-A1 的整條感應線都具備偵測功能，僅末端塑膠帽與延長線無偵測能力。",
+    "category": "感應能力",
+    "keywords": "SW-A1,感應線,漏水偵測,延長線,偵測範圍",
+    "similar_phrases": "感應線哪裡可以偵測水, 延長線也會偵測嗎"
+  },
+  {
+    "id": 72,
+    "question": "一個 SW-A1 最多可搭配幾個 SW-A2？",
+    "answer": "一個 SW-A1 感應器最多可搭配 16 個 SW-A2 感應器使用。",
+    "category": "配對連接",
+    "keywords": "配對數量,連接上限,感應器數量,SW-A1可搭幾個SW-A2",
+    "similar_phrases": "可以接幾個 SW-A2, 最多幾個感應器, SW-A1 有上限嗎"
+  },
+  {
+    "id": 73,
+    "question": "當偵測到漏水時，SW-A1 的警報會響多久？",
+    "answer": "SW-A1 將每秒持續發出嗶聲，直到不再偵測到水為止。您可選擇暫時靜音，但裝置仍會每 27 秒嗶三聲提醒水源存在。",
+    "category": "警示通知",
+    "keywords": "聲音警報,漏水警示,SW-A1嗶聲,警報靜音",
+    "similar_phrases": "警報會一直響嗎, 要怎麼關掉警報, 嗶聲會多久"
+  },
+  {
+    "id": 74,
+    "question": "SW-A2 的電池壽命大約多久？",
+    "answer": "在正常使用情況下，SW-A2 的電池壽命約為兩年。實際壽命會依偵測頻率與環境因素略有不同。",
+    "category": "電池管理",
+    "keywords": "電池壽命,電池可用時間,SW-A2多久換電池",
+    "similar_phrases": "電池能用多久, 幾年要換電池, 兩年換一次嗎"
+  },
+  {
+    "id": 75,
+    "question": "如何更換 SW-A2 感應器的電池？",
+    "answer": "使用十字起子拆開底部四顆螺絲，打開上蓋後更換 2 顆 AAA 電池，重新鎖緊以保持防水。",
+    "category": "電池管理",
+    "keywords": "更換電池,SW-A2換電池,感應器電池安裝",
+    "similar_phrases": "要怎麼換電池, 電池放在哪, 電池壞了怎麼辦"
+  },
+  {
+    "id": 76,
+    "question": "如何測試 SW-A1 是否正常運作？",
+    "answer": "確認 LED 為綠燈常亮後，將水滴在感應線上，應會響警報、閃紅燈並發送推播通知。",
+    "category": "裝置測試",
+    "keywords": "SW-A1測試,感應器運作檢查,測試漏水反應",
+    "similar_phrases": "怎麼確認 SW-A1 有作用, 測試警報功能, 怎樣知道正常"
+  },
+  {
+    "id": 77,
+    "question": "如何測試 SW-A2 是否正常運作？",
+    "answer": "按下 SW-A2 背後按鈕喚醒裝置，或將水接觸 4 個金屬探針。SW-A1 將響三聲並發送測試通知。",
+    "category": "裝置測試",
+    "keywords": "SW-A2測試,金屬探針,喚醒裝置,測試功能",
+    "similar_phrases": "如何確認 SW-A2 好的, 怎麼測試感應器, 裝置測試方式"
+  },
+  {
+    "id": 78,
+    "question": "為什麼 SW-A2 沒有出現在我的 App 中？",
+    "answer": "若 SW-A1 被重設為出廠設定，所有已配對的 SW-A2 感應器將從 App 中移除。",
+    "category": "配對連接",
+    "keywords": "SW-A2消失,App找不到,SW-A1重設,感應器消失",
+    "similar_phrases": "為何 SW-A2 不見了, 感應器被刪除了嗎, 沒看到 SW-A2"
+  },
+  {
+    "id": 79,
+    "question": "SW-A11KT 偵測漏水時，我會收到哪些警示？",
+    "answer": "您會透過：SW-A1 嗶聲、紅燈閃爍與手機推播通知三種方式同時提醒。",
+    "category": "警示通知",
+    "keywords": "SW-A11KT,漏水通知,三重警示,警報提醒",
+    "similar_phrases": "我會收到哪些漏水通知, 會跳推播嗎, 裝置會叫嗎"
+  },
+  {
+    "id": 80,
+    "question": "收到 SW-A2 的低電量通知後該怎麼辦？",
+    "answer": "請更換 2 顆 AAA 電池，並建議重新測試 SW-A2 運作狀態以確認功能正常。",
+    "category": "電池管理",
+    "keywords": "低電量通知,更換電池,SW-A2電池不足",
+    "similar_phrases": "電池快沒電了怎麼辦, 低電警示要處理嗎"
+  },
+  {
+    "id": 81,
+    "question": "為什麼 SW-A2 在 SW-A1 關機後仍顯示為上線？",
+    "answer": "SW-A2 處於省電模式，每半小時才與 SW-A1 同步狀態。若 SW-A1 關機，App 會延後更新為離線。",
+    "category": "裝置狀態",
+    "keywords": "上線狀態,SW-A2省電模式,SW-A1關機",
+    "similar_phrases": "為什麼還顯示在線上, 已關機卻還上線, 感應器沒離線"
   }
+
 
 
 
