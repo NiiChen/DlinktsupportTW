@@ -768,7 +768,16 @@
     "category": "Wi-Fi 連線",
     "keywords": ["變更 Wi-Fi 設定", "SSID 修改", "Wi-Fi 密碼變更", "延伸器設定", "AQUILA Wi-Fi"],
     "similar_phrases": ["怎麼改 Wi-Fi 名稱", "我要換 Wi-Fi 密碼", "路由器 Wi-Fi 設定在哪"]
-  }
+  },
+  {
+  "id": 96,
+  "question": "什麼是 D-Link Wi-Fi Mesh？",
+  "answer": "AQUILA PRO AI Mesh 路由器可與支援 Mesh 的 AQUILA PRO AI 延伸器自由搭配，建構出涵蓋家中每個角落的無縫網路。當您將 Mesh 延伸器加入 AQUILA PRO AI 路由器的無線網路後，所有無線用戶端裝置將共用相同的 Wi-Fi 名稱與密碼。透過 D-Link Wi-Fi Mesh 網路，即可徹底消除 Wi-Fi 死角，無論是視訊通話、串流娛樂、瀏覽網頁等日常活動，都能在家中自由移動，享受更穩定順暢的無線連線體驗。\n\n若您選擇使用 D-Link Wi-Fi Mesh，Mesh 路由器與 Mesh 延伸器之間將會同步傳輸資訊，包括 Wi-Fi SSID、Wi-Fi 密碼、安全性與路由器登入密碼。為了體驗由 AQUILA PRO AI 裝置建構的 Mesh 網路所帶來的無縫漫遊，請確保您的 Wi-Fi 用戶端裝置支援 802.11k/v 協定。\n\nD-Link Wi-Fi Mesh 提升您 Wi-Fi 使用體驗的方式：\n\n| 傳統路由器 + 延伸器             | D-Link Wi-Fi Mesh                        |\n|----------------------------------|------------------------------------------|\n| 當您在家中移動時，訊號可能變弱   | 採用進階漫遊技術，訊號始終穩定            |\n| 每台裝置都需個別手動設定         | 自動建立 Mesh 網路並完成所有 Mesh 裝置設定 |\n| 連線中斷後需手動排除             | 自動修復 Mesh 網路連線                  |\n| 多組 SSID 需重複登入             | 單一 SSID 登入更方便                     |",
+  "category": "Wi-Fi Mesh 網路",
+  "keywords": ["Wi-Fi Mesh", "無縫漫遊", "AQUILA PRO AI Mesh", "延伸器", "單一SSID"],
+  "similar_phrases": ["D-Link Mesh 是什麼", "Mesh 和延伸器有什麼不同", "怎麼使用 Wi-Fi Mesh"]
+}
+
 
 
 
