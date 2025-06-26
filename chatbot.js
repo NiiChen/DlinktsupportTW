@@ -5,7 +5,7 @@ let currentFAQMatches = [];
 const MAX_ROUNDS = 3;
 
 const SUPABASE_URL = 'https://isxzglzdtytltsekvfhw.supabase.co';
-const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...'; // 請替換成你自己的 Key
+const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...'; // ← 請換成你的真實 API Key
 const headers = {
   apikey: SUPABASE_KEY,
   Authorization: `Bearer ${SUPABASE_KEY}`,
@@ -98,6 +98,12 @@ function showFAQResults(matches) {
     appendMessage('bot', `<strong>Q:</strong> ${match.question}<br><strong>A:</strong> ${match.answer}`, true);
   });
 
+  // 🔘 新增：相關問題按鈕
+  const suggestionButtons = matches.map(match => `
+    <button onclick="handleUserInput('${match.question}')">${match.question}</button>
+  `).join("<br>");
+  appendMessage('bot', `<div>你也可以點選以下相關問題：<br>${suggestionButtons}</div>`, true);
+
   const feedbackButtons = `
     <div class="feedback">
       <button onclick="handleFeedback(true)">✅ 有幫助</button>
@@ -108,7 +114,7 @@ function showFAQResults(matches) {
 }
 
 async function handleFeedback(isResolved) {
-  const userInput = document.querySelectorAll('.message.user:last-child')[0]?.innerText || '';
+  const userInput = document.querySelectorAll('.message.user:last-child')[0]?.textContent || '';
   const matchedId = currentFAQMatches[0]?.id || null;
   await recordToSupabase(userInput, matchedId, isResolved);
 
@@ -162,3 +168,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
   resetChat();
 });
+
