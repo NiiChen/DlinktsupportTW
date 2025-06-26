@@ -75,13 +75,28 @@ async function handleUserInput(userInput) {
 }
 
 function matchFAQ(input, faqs) {
-  input = input.toLowerCase();
+  input = input.toLowerCase().trim();
+
+  // 優先完全匹配的
+  const exactMatch = faqs.find(faq => faq.question.toLowerCase().trim() === input);
+  if (exactMatch) {
+    const others = faqs.filter(f => f.id !== exactMatch.id); // 避免重複
+    const similarMatches = others.filter(faq =>
+      faq.question.toLowerCase().includes(input) ||
+      checkMatch(faq.keywords, input) ||
+      checkMatch(faq.similar_phrases, input)
+    ).slice(0, 5);
+    return [exactMatch, ...similarMatches];
+  }
+
+  // 一般模糊匹配（最多 6 筆）
   return faqs.filter(faq =>
     faq.question.toLowerCase().includes(input) ||
     checkMatch(faq.keywords, input) ||
     checkMatch(faq.similar_phrases, input)
-  ).slice(0, 3);
+  ).slice(0, 6);
 }
+
 
 function checkMatch(field, input) {
   if (!field) return false;
