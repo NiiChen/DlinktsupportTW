@@ -92,7 +92,6 @@ function checkMatch(field, input) {
   }
   return false;
 }
-}
 
 function showFAQResults(matches) {
   matches.forEach(match => {
