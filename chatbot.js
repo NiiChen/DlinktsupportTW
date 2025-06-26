@@ -94,14 +94,22 @@ function checkMatch(field, input) {
 }
 
 function showFAQResults(matches) {
-  matches.forEach(match => {
-    appendMessage('bot', `<strong>Q:</strong> ${match.question}<br><strong>A:</strong> ${match.answer}`, true);
-  });
+  if (matches.length === 0) return;
 
-  // 🔘 新增：相關問題按鈕
-  const suggestionButtons = matches.map(match => `
+  const firstMatch = matches[0];
+
+  // 顯示第一題答案
+  appendMessage(
+    'bot',
+    `<strong>Q:</strong> ${firstMatch.question}<br><strong>A:</strong> ${firstMatch.answer}`,
+    true
+  );
+
+  // 顯示最多五題相關問題的按鈕（包含第一題）
+  const suggestionButtons = matches.slice(0, 5).map(match => `
     <button onclick="handleUserInput('${match.question}')">${match.question}</button>
   `).join("<br>");
+
   appendMessage('bot', `<div>你也可以點選以下相關問題：<br>${suggestionButtons}</div>`, true);
 
   const feedbackButtons = `
