@@ -78,9 +78,20 @@ function matchFAQ(input, faqs) {
   input = input.toLowerCase();
   return faqs.filter(faq =>
     faq.question.toLowerCase().includes(input) ||
-    (faq.keywords && faq.keywords.toLowerCase().split(',').some(k => input.includes(k.trim()))) ||
-    (faq.similar_phrases && faq.similar_phrases.toLowerCase().split(',').some(p => input.includes(p.trim())))
+    checkMatch(faq.keywords, input) ||
+    checkMatch(faq.similar_phrases, input)
   ).slice(0, 3);
+}
+
+function checkMatch(field, input) {
+  if (!field) return false;
+  if (Array.isArray(field)) {
+    return field.some(item => input.includes(item.toLowerCase().trim()));
+  } else if (typeof field === 'string') {
+    return field.split(',').some(item => input.includes(item.toLowerCase().trim()));
+  }
+  return false;
+}
 }
 
 function showFAQResults(matches) {
