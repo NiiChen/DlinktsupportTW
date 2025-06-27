@@ -742,7 +742,7 @@
     "question": "家長監控功能無法正常運作時，我該怎麼做？",
     "answer": "家長監控功能可用來限制孩子在特定時段使用網際網路的權限。如果孩子的行動裝置在被封鎖的時段仍能上網，請依照以下方式進行故障排除：\n\n• 停用私有 MAC 位置：D-Link 會透過固定的 MAC 位址來識別用戶端裝置。但 iOS、Android 和 Windows 裝置可能會使用隨機的 MAC 位址連接 Wi-Fi，導致您設定的家長監控規則無法正確套用。請參考以下說明頁面，停用孩子裝置上的隨機 MAC 位址功能：\n  - https://support.apple.com/zh-tw/HT211227\n  - https://source.android.com/devices/tech/connect/wifi-mac-randomization?hl=zh-tw\n\n• 僅連接至 AQUILA PRO AI Mesh 裝置：所有針對孩子裝置所設定的家長監控規則，僅適用於連接至 AQUILA PRO AI 路由器或 AQUILA PRO AI Mesh 網路時。請確認孩子的裝置未連接至非 Mesh 系統的延伸器。",
     "category": "家長控制",
-    "keywords": ["家長控制", "監控失效","監控", "無法封鎖"", "限制使用"],
+    "keywords": ["家長控制", "監控失效","監控", "無法封鎖", "限制使用"],
     "similar_phrases": ["家長控制無效怎麼辦", "為什麼孩子被封鎖還能上網", "MAC 位址隨機化會影響家長控制嗎"]
   },
   {
