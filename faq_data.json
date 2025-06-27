@@ -68,7 +68,7 @@
     "question": "為什麼 AQUILA PRO AI app 會要求位置資訊？",
     "answer": "你的位置資訊可以協助我們提供產品安裝設定。當你在安裝 D-Link 裝置時，行動裝置的作業系統 (Android 和 iOS) 會要求存取位置權限，以利 AQUILA PRO AI app 可以尋找到鄰近的 D-Link 裝置。因此，為確保你順利完成安裝，請開啟行動裝置的 GPS 或是位置，並允許 AQUILA PRO AI app 存取手機的 GPS 或是位置資訊。",
     "category": "安裝與設定",
-    "keywords": "位置資訊, 安裝, GPS",
+    "keywords": "位置資訊", "GPS",
     "similar_phrases": "為什麼要開位置, 為什麼要存取 GPS, 為什麼需要位置權限"
   },
   {
